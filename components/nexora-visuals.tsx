@@ -38,45 +38,53 @@ export function DevicePhoneMenu(props: SVGProps<SVGSVGElement>) {
         height="428"
         rx="32"
         stroke={goldStroke}
-        strokeWidth={1.2}
-        opacity={0.92}
+        strokeWidth={1.45}
+        fill="rgb(8 8 9 / 0.35)"
       />
-      <rect x="88" y="28" width="64" height="6" rx="3" fill={line} opacity={0.45} />
+      <rect x="88" y="28" width="64" height="6" rx="3" fill={line} opacity={0.5} />
 
-      <rect x="36" y="48" width="168" height="34" rx="10" stroke={goldMuted} strokeWidth={1.05} opacity={0.8} />
-      <text x="120" y="70" textAnchor="middle" fill={line} fontSize={11} fontFamily={ui}>
-        عرض المنيو
+      <rect
+        x="36"
+        y="48"
+        width="168"
+        height="40"
+        rx="11"
+        stroke={goldStroke}
+        strokeWidth={1.15}
+        fill="rgb(212 175 55 / 0.06)"
+      />
+      <text x="120" y="73" textAnchor="middle" fill={goldStroke} fontSize={12.5} fontWeight={600} fontFamily={ui}>
+        منيو
       </text>
 
-      <text x="120" y="104" textAnchor="middle" fill={goldStroke} fontSize={8.5} fontFamily={ui} opacity={0.92}>
-        قائمة اليوم للاطّلاع
-      </text>
-
-      {/* ثلاث بطاقات أصناف؛ هذا القسم مخصّص للعرض فقط حسب تجزئة المنتج */}
       {[0, 1, 2].map((i) => {
-        const y = 116 + i * 74;
+        const y = 110 + i * 76;
         return (
           <g key={`eco-menu-row-${String(i)}`}>
-            <rect x="32" y={y} width="176" height="60" rx="15" stroke={goldStroke} strokeWidth={1.05} opacity={0.93} />
-            <rect x="44" y={y + 12} width="42" height="36" rx="9" stroke={goldMuted} strokeWidth={1} />
+            <rect
+              x="30"
+              y={y}
+              width="180"
+              height="64"
+              rx="15"
+              stroke={goldStroke}
+              strokeWidth={1.15}
+              fill="rgb(20 18 14 / 0.45)"
+            />
+            <rect x="42" y={y + 14} width="44" height="36" rx="9" stroke={goldMuted} strokeWidth={1.15} fill="rgb(0 0 0 / 0.25)" />
             <path
-              d={`M98 ${21 + y}h98M98 ${36 + y}h64`}
+              d={`M100 ${26 + y}h94M100 ${43 + y}h72`}
               stroke={line}
-              strokeWidth={1.05}
-              opacity={0.48}
+              strokeWidth={1.2}
+              opacity={0.55}
               strokeLinecap="round"
             />
           </g>
         );
       })}
 
-      <rect x="34" y="362" width="172" height="68" rx="14" stroke={goldMuted} strokeWidth={1.05} opacity={0.6} />
-      <text x="120" y="388" textAnchor="middle" fill={line} fontSize={8} fontFamily={ui}>
-        عرض الأسعار والأصناف فقط قبل ما العربة تأخذ ذلك في جزء تجزئة آخر
-      </text>
-      <text x="120" y="416" textAnchor="middle" fill={goldStroke} fontSize={8.75} fontFamily={ui}>
-        تأكيد الطلب وحالة الدفع حيث تكمِّنون ذلك خارج هذا القسم
-      </text>
+      {/* زر أسفل مخفّف كعنصر بصري فقط بدون شرح طويل */}
+      <rect x="76" y="408" width="88" height="5" rx="2.5" fill={goldStroke} opacity={0.55} />
     </svg>
   );
 }
@@ -92,141 +100,138 @@ export function DevicePhoneOrderLookup(props: SVGProps<SVGSVGElement>) {
         height="428"
         rx="32"
         stroke={goldStroke}
-        strokeWidth={1.2}
-        opacity={0.92}
+        strokeWidth={1.45}
+        fill="rgb(8 8 9 / 0.35)"
       />
-      <rect x="88" y="28" width="64" height="6" rx="3" fill={line} opacity={0.45} />
+      <rect x="88" y="28" width="64" height="6" rx="3" fill={line} opacity={0.5} />
 
-      <text x="120" y="56" textAnchor="middle" fill={goldStroke} fontSize={11} fontFamily={ui}>
+      <text x="120" y="58" textAnchor="middle" fill={goldStroke} fontSize={13} fontWeight={600} fontFamily={ui}>
         طلباتي
       </text>
-      <text x="120" y="80" textAnchor="middle" fill={line} fontSize={8} fontFamily={ui} opacity={0.86}>
-        نفس جوّال تسجيل الطلب حيث أدخل عميلكم بيانته
-      </text>
 
-      <text x="120" y="104" textAnchor="middle" fill={goldStroke} fontSize={7.85} fontFamily={ui}>
-        رقم الجوال
-      </text>
-      <rect x="36" y="112" width="168" height="44" rx="12" stroke={goldMuted} strokeWidth={1.1} opacity={0.85} />
-      <text x="120" y="139" textAnchor="middle" fill={line} fontSize={9.75} fontFamily={ui} opacity={0.58}>
-        05xx ····· ·····
-      </text>
+      <rect x="36" y="78" width="168" height="46" rx="12" stroke={goldMuted} strokeWidth={1.15} fill="rgb(20 18 14 / 0.4)" />
+      <path
+        d="M52 106h136"
+        stroke={line}
+        strokeWidth={1.3}
+        strokeLinecap="round"
+        opacity={0.35}
+      />
 
-      <rect x="44" y="172" width="152" height="40" rx="14" stroke={goldStroke} strokeWidth={1.15} />
-      <text x="120" y="198" textAnchor="middle" fill={line} fontSize={11} fontFamily={ui}>
-        بحث عن الطلبات
+      <rect x="40" y="142" width="160" height="44" rx="13" stroke={goldStroke} strokeWidth={1.2} fill="rgb(212 175 55 / 0.12)" />
+      <text x="120" y="170" textAnchor="middle" fill={goldStroke} fontSize={13} fontWeight={600} fontFamily={ui}>
+        بحث
       </text>
 
       {[0, 1, 2].map((i) => (
         <g key={`ol-${String(i)}`}>
-          <rect x="32" y={214 + i * 58} width="176" height="48" rx="12" stroke={goldStroke} opacity={0.9 - i * 0.06} />
-          <path
-            d={`M48 ${230 + i * 58}h84M48 ${246 + i * 58}h98`}
-            stroke={line}
-            strokeWidth={1}
-            opacity={0.42}
+          <rect
+            x="30"
+            y={208 + i * 62}
+            width="180"
+            height="52"
+            rx="12"
+            stroke={goldStroke}
+            strokeWidth={1.1}
+            fill="rgb(14 13 11 / 0.5)"
+            opacity={1 - i * 0.04}
           />
-          <circle cx="198" cy={238 + i * 58} r="11" stroke={goldMuted} strokeWidth={1.15} opacity={0.88} />
+          <path
+            d={`M48 ${224 + i * 62}h90M48 ${243 + i * 62}h78`}
+            stroke={line}
+            strokeWidth={1.1}
+            opacity={0.5}
+            strokeLinecap="round"
+          />
+          <circle cx="200" cy={234 + i * 62} r="11" stroke={goldMuted} strokeWidth={1.2} fill="rgb(212 175 55 / 0.08)" />
         </g>
       ))}
 
-      <rect x="32" y="398" width="176" height="34" rx="10" stroke={line} strokeOpacity={0.35} opacity={0.92} strokeWidth={0.9} />
-      <text x="120" y="420" textAnchor="middle" fill={goldStroke} fontSize={7.5} fontFamily={ui}>
-        حالة كل طلب واضحة — يمكن إضافة خريطة خارجية حيث تكمِّنون ذلك
-      </text>
+      <rect x="76" y="408" width="88" height="5" rx="2.5" fill={goldStroke} opacity={0.55} />
     </svg>
   );
 }
 
-/** لوحة إداريّة: تعديل المحتوى (منيو · عروض) ولوحة الطلبات معًا */
+/** لوحة إداريّة: محتوى + تحرير + طلبات — نصوص قصيرة وأشكال أوضح */
 export function DeviceLaptopOperations(props: SVGProps<SVGSVGElement>) {
   const ui = arabicUi;
   return (
     <svg viewBox="0 0 380 268" fill="none" aria-hidden {...props}>
-      <path d="M48 218h294l26 14h-346l26-14Z" stroke={goldMuted} strokeWidth={1} />
-      <rect x="28" y="18" width="324" height="190" rx="12" stroke={goldStroke} strokeWidth={1.1} />
+      <path d="M48 218h294l26 14h-346l26-14Z" stroke={goldMuted} strokeWidth={1.1} fill="rgb(6 6 7 / 0.5)" />
+      <rect x="28" y="18" width="324" height="190" rx="12" stroke={goldStroke} strokeWidth={1.2} fill="rgb(10 10 12 / 0.55)" />
 
-      <rect x="40" y="34" width="56" height="158" rx="8" stroke={line} opacity={0.4} strokeWidth={1.05} />
-      <text x="68" y="58" textAnchor="middle" fill={goldStroke} fontSize={7} fontFamily={ui}>
-        محتوى
-      </text>
-      <path d="M52 92h34M52 126h34" stroke={goldMuted} strokeWidth={8} strokeLinecap="round" opacity={0.5} />
-      <text x="68" y="158" textAnchor="middle" fill={goldStroke} fontSize={7} fontFamily={ui}>
-        منيو · عروض
-      </text>
+      <path d="M102 38v164M232 38v164" stroke={goldStroke} strokeOpacity={0.35} strokeWidth={1} />
 
-      <rect x="108" y="34" width="118" height="158" rx="10" stroke={goldMuted} strokeWidth={1.05} />
-      <text x="167" y="56" textAnchor="middle" fill={goldStroke} fontSize={8.5} fontFamily={ui}>
-        تعديل المنيو
-      </text>
-      <path d="M124 76h136M124 98h142M124 120h138" stroke={line} strokeWidth={0.9} opacity={0.42} />
+      <rect x="38" y="34" width="58" height="162" rx="8" stroke={line} strokeOpacity={0.5} fill="rgb(0 0 0 / 0.2)" strokeWidth={1.1} />
+      {[74, 100, 126].map((yy) => (
+        <path key={`nav-${yy}`} d={`M46 ${yy}h42`} stroke={goldMuted} strokeWidth={6} strokeLinecap="round" opacity={0.55} />
+      ))}
 
-      <rect x="238" y="34" width="114" height="158" rx="10" stroke={goldStroke} strokeWidth={1.05} />
-      <text x="295" y="56" textAnchor="middle" fill={goldStroke} fontSize={8.75} fontFamily={ui}>
-        الطلبات
+      <rect x="110" y="34" width="114" height="162" rx="10" stroke={goldMuted} strokeWidth={1.1} fill="rgb(212 175 55 / 0.04)" />
+      <path d="M126 62h92M126 86h98M126 110h94M126 136h90" stroke={line} strokeWidth={1.15} opacity={0.48} strokeLinecap="round" />
+
+      <rect x="236" y="34" width="104" height="162" rx="10" stroke={goldStroke} strokeWidth={1.15} fill="rgb(212 175 55 / 0.06)" />
+      <path d="M250 70h152M250 98h152M250 126h152M250 156h152" stroke={line} strokeWidth={1} opacity={0.4} strokeLinecap="round" />
+
+      <text x="190" y="30" textAnchor="middle" fill={goldStroke} fontSize={9.5} fontWeight={600} fontFamily={ui}>
+        لوحة التشغيل
       </text>
-      <path d="M254 76h154M254 102h154M254 126h154M254 154h154" stroke={line} strokeWidth={0.85} opacity={0.45} />
     </svg>
   );
 }
 
-/** لوحة إدارة عامة: مؤشرات ورسوم وصلاحيات شاملة */
+/** لوحة إدارة عامة: دائرة KPI + أعمدة — نص عنوان واحد فقط */
 export function DeviceLaptopExecutive(props: SVGProps<SVGSVGElement>) {
   const ui = arabicUi;
   const barGrad = `exec-bar-${useId().replace(/:/g, "")}`;
-  const r = 44;
+  const r = 48;
   const c = 2 * Math.PI * r;
   return (
     <svg viewBox="0 0 400 274" fill="none" aria-hidden {...props}>
-      <path d="M50 226h324l44 42h-412l44-42Z" stroke={goldMuted} strokeWidth={1} />
-      <rect x="22" y="18" width="356" height="196" rx="14" stroke={goldStroke} strokeWidth={1.12} />
-      <text x="200" y="46" textAnchor="middle" fill={goldStroke} fontSize={11} fontFamily={ui}>
+      <path d="M50 226h324l44 42h-412l44-42Z" stroke={goldMuted} strokeWidth={1.1} fill="rgb(6 6 7 / 0.5)" />
+      <rect x="22" y="18" width="356" height="196" rx="14" stroke={goldStroke} strokeWidth={1.2} fill="rgb(10 10 12 / 0.55)" />
+      <text x="200" y="48" textAnchor="middle" fill={goldStroke} fontSize={12} fontWeight={600} fontFamily={ui}>
         إدارة عامة
-      </text>
-      <text x="200" y="66" textAnchor="middle" fill={line} fontSize={8} fontFamily={ui} opacity={0.85}>
-        طلبات · عملاء · صلاحيات كاملة
       </text>
 
       <defs>
         <linearGradient id={barGrad} x1="0" y1="1" x2="0" y2="0">
           <stop stopColor="#090909" />
-          <stop offset="1" stopColor="#d4af3788" />
+          <stop offset="1" stopColor="#cfa63a" stopOpacity={0.55} />
         </linearGradient>
       </defs>
 
-      <circle cx="96" cy="130" r={r} stroke={goldMuted} strokeWidth={8} opacity={0.38} />
+      <circle cx="108" cy="132" r={r} stroke={goldMuted} strokeWidth={9} opacity={0.45} fill="none" />
       <circle
-        cx="96"
-        cy="130"
+        cx="108"
+        cy="132"
         r={r}
         stroke={goldStroke}
-        strokeWidth={8}
+        strokeWidth={9}
         strokeLinecap="round"
-        strokeDasharray={`${c * 0.72} ${c}`}
-        transform={`rotate(-90 96 130)`}
+        strokeDasharray={`${c * 0.7} ${c}`}
+        transform={`rotate(-90 108 132)`}
         fill="none"
       />
+      <circle cx="108" cy="132" r="6" fill={goldStroke} opacity={0.9} />
 
       {[0, 1, 2, 3].map((i) => (
         <rect
           key={`ex-bar-${String(i)}`}
-          x={160 + i * 54}
-          y={176 - i * 8}
-          width={30}
-          height={58 + i * 16}
-          rx={7}
+          x={178 + i * 48}
+          y={174 - i * 10}
+          width={32}
+          height={62 + i * 18}
+          rx={8}
           fill={`url(#${barGrad})`}
           stroke={goldStroke}
-          opacity={0.92 - i * 0.06}
+          strokeWidth={1.1}
+          opacity={0.94 - i * 0.05}
         />
       ))}
 
-      <path d="M294 154h78M294 172h92M294 190h78" stroke={line} strokeWidth={1} opacity={0.35} />
-      <circle cx="320" cy="124" r="32" stroke={line} opacity={0.18} strokeWidth={14} />
-
-      <text x="200" y="204" textAnchor="middle" fill={line} fontSize={7.75} fontFamily={ui}>
-        يُضبط عندكم من يضيف أو يعدّل أي عنصر في الموقع
-      </text>
+      <circle cx="312" cy="128" r="36" stroke={goldStroke} strokeOpacity={0.25} strokeWidth={16} fill="rgb(212 175 55 / 0.06)" />
+      <path d="M294 154h74M294 174h82" stroke={line} strokeWidth={1.1} opacity={0.4} strokeLinecap="round" />
     </svg>
   );
 }
@@ -237,7 +242,7 @@ export const featureMocks = [
     subtitle:
       "بطاقات أصناف بصورة وسطرّان لوصف مختصر؛ واجهة للاطّلاع على القائمة والأسعار، مع إمكان فصل تأكيد الطلب والعربة في مسار أو وحدة تجزئة أخرى إن رغبت.",
     description:
-      "هاتف بعمود بطاقات وعنوان «عرض المنيو»؛ الأسفل يذكّر أن تأكيد الطلب وحالة الدفع يمكن ضبطهما خارج هذا القسم حسب تجزئة المنتج.",
+      "هاتف يظهر عليه عنوان «منيو» فوق ثلاث بطاقات بصور مصغّرة وأسطر نصية، وفي الأسفل شريط تنقّل مرجعي بسيط بدل أزرار مطوّلة داخل الرسم.",
     caption:
       "الشكل يعكس تجربة قراءة سريعة للمنيو قبل أي خطوة شراء؛ التحديثات تتم من لوحة المحتوى عند من يملك الصلاحية.",
     points: [
@@ -250,7 +255,7 @@ export const featureMocks = [
   {
     title: "متابعة الطلب بحثًا برقم الجوال",
     subtitle:
-      "العميل يُدخل نفس جوّال تسجيل الطلب، ثم زر «بحث عن الطلبات»، فتظهر أسطر تلخِّص طلباته وحالاتها.",
+      "العميل يُدخل نفس جوّال تسجيل الطلب، ثم يضغط «بحث»، فتظهر أسطر تلخِّص طلباته وحالاتها.",
     description:
       "هاتف فيه عنوان «طلباتي»، وحقل لرقم الجوال، ثم زر بحث، ثم عدة بطاقات أسطر تُجسِّد نتائج البحث كما في الجهاز المعروض في الرسم.",
     caption:
@@ -267,7 +272,7 @@ export const featureMocks = [
     subtitle:
       "شريط محتوى (منيو وعروض) بجانب مساحة لتحرير المنيو، ولوحة أعمدة لمراجعة الطلبات في نفس المتصفّح.",
     description:
-      "رسم لابتوب يقسِّم الشاشة: يسارًا شريط تنقل للمحتوى، ووسطًا مساحة لسطور المنتجات والعروض، ويمينًا جدولًا لمراجعة الطلبات كما في الرسم.",
+      "رسم لابتوب يفصل الشاشة عموديًا: يسار قائمة جانبية مرسومة بخطوط، ووسط مساحة أسطر، ويمين شبكة صفوف كجدول طلبات؛ عنوان واحد فقط «لوحة التشغيل» فوق الرسم.",
     caption:
       "التقسيم يوضِّح أن تعديل القائمة يمكن أن يتم بجانب متابعة الطلبات دون الخروج من نفس الجلسة عند ضبط صلاحياتكم.",
     points: [
@@ -280,9 +285,9 @@ export const featureMocks = [
   {
     title: "الإدارة العامة والتحليلات",
     subtitle:
-      "دائرة إحصاء، أعمدة تقارير، وسطر يذكِّر بصلاحية تعديل أي عنصر في الموقع عند من تمنحونهم حق الإدارة العامة.",
+      "دائرة إحصاء، أعمدة تقارير، ومؤشرات جانبية — العنوان «إدارة عامة» فقط داخل الشاشة.",
     description:
-      "واجهة لابتوب فيها مقطع دائري، أعمدة متدرّجة، وعناصر حواشٍ تُقترَن بمؤشرات الطلبات والعملاء كما في الرسم؛ السطر السفلي يفسِّر أن الصلاحيات الشاملة تُضبط عندكم.",
+      "واجهة لابتوب فيها دائرة مقطوعة، أعمدة متدرّجة، وحلقة ومؤشِّر خطوط في الجانب؛ بدون أسطر تشريح طويلة داخل الشاشة — التفاصيل في النص خارج الرسم.",
     caption:
       "الأرقام في الرسم تعبير بصري فقط؛ تربطونها لاحقًا ببياناتكم الفعلية من مصدر واحد للحقيقة.",
     points: [
