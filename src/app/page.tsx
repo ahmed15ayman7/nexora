@@ -17,7 +17,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { Sparkle } from "lucide-react";
 
 type FeatureTile = {
   eyebrow: string;
@@ -28,31 +27,31 @@ type FeatureTile = {
 
 const FEATURE_TILES: FeatureTile[] = [
   {
-    eyebrow: "Browse & entice",
+    eyebrow: "Digital menu on mobile",
     title: "Digital Menu",
     copy:
-      "High-contrast plating, pacing cues, dietary tags, and instant add-to-cart for luminous storefronts.",
+      "Crisp plating photography, pacing cues, and one-tap add-to-cart engineered for luminous mobile storefronts.",
     Media: IllustrationDigitalMenu,
   },
   {
-    eyebrow: "Stage-aware carts",
+    eyebrow: "Fast live order tracking",
     title: "Smart Cart & Tracking",
     copy:
-      "Split carts with SLA overlays, routed couriers with ETA threads and live telemetry on the map.",
+      "Stage-aware carts with live SLA overlays, courier routing, ETA threads, and map telemetry.",
     Media: IllustrationTracking,
   },
   {
-    eyebrow: "Command layer",
+    eyebrow: "Integrated web dashboard",
     title: "Seamless Web App",
     copy:
-      "Operations dashboards unify ticketing, pacing, ingest, forecasting triggers, and partner connectors.",
+      "Order management and analytics unified—ticketing, pacing, ingest, and forecast triggers from one pane.",
     Media: IllustrationDashboard,
   },
   {
-    eyebrow: "Throughput stack",
+    eyebrow: "High-speed ordering",
     title: "Fast & Reliable",
     copy:
-      "Sub-second payloads, jitter-free transports, deterministic sync, and observability across every storefront hop.",
+      "Sub-second payloads, jitter-free transports, deterministic sync—the stack built for rush-hour throughput.",
     Media: IllustrationSpeed,
   },
 ];
@@ -119,7 +118,7 @@ export default function Home() {
             NEXORA
           </h1>
           <p className="mt-4 font-sans text-[0.62rem] font-semibold uppercase tracking-[2.2vw] text-gold-400 sm:text-[0.62rem] sm:tracking-[1.42rem]">
-            Restaurant
+            RESTAURANT
           </p>
           <p className="mx-auto mt-8 max-w-md text-[0.95rem] leading-relaxed text-gold-200/85">
             A precision-built digital storefront for luminous hospitality—with
@@ -138,8 +137,8 @@ export default function Home() {
           />
           <Image
             priority
-            src="/logo.jpg"
-            alt="Circular Nexora emblem in metallic gold on deep black lacquer glass"
+            src="/nexora-emblem.png"
+            alt="Circular Nexora emblem in metallic gold on deep black"
             width={672}
             height={672}
             sizes="320px"
@@ -197,11 +196,6 @@ export default function Home() {
           <p className="font-heading text-[0.8125rem] font-medium uppercase tracking-[0.38em] text-gold-300/92">
             Taste Beyond Experience
           </p>
-          <Sparkle
-            aria-hidden
-            strokeWidth={1.15}
-            className="pointer-events-none absolute -bottom-2 right-2 size-6 text-white/85 sm:right-6"
-          />
         </footer>
       </main>
     </div>
