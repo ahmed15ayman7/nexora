@@ -3,6 +3,7 @@ import type { SVGProps } from "react";
 const goldStroke = "#d4af37";
 const goldSoft = "#b8952f";
 const line = "#e8cf7acc";
+const arabicUi = 'var(--font-ui), Cairo, ui-sans-serif, system-ui, sans-serif';
 
 export function EcoArrow(props: SVGProps<SVGSVGElement>) {
   return (
@@ -14,7 +15,14 @@ export function EcoArrow(props: SVGProps<SVGSVGElement>) {
         strokeLinejoin="round"
         strokeWidth={1.35}
       />
-      <circle cx={22} cy={23} r={2} fill="#d9c07a88" stroke="#d9b058" strokeWidth={0.6} />
+      <circle
+        cx={22}
+        cy={23}
+        r={2}
+        fill="#d9c07a88"
+        stroke="#d9b058"
+        strokeWidth={0.6}
+      />
     </svg>
   );
 }
@@ -33,20 +41,26 @@ export function DevicePhoneMenu(props: SVGProps<SVGSVGElement>) {
         opacity={0.9}
       />
       <rect x="88" y="28" width="64" height="6" rx="3" fill={line} opacity={0.45} />
-      <rect x="36" y="56" width="168" height="36" rx="8" stroke={goldSoft} opacity={0.45} />
+      <rect
+        x="36"
+        y="56"
+        width="168"
+        height="36"
+        rx="8"
+        stroke={goldSoft}
+        opacity={0.45}
+      />
       <text
         x="120"
         y="78"
         textAnchor="middle"
         fill={line}
-        fontSize={11}
-        fontFamily="ui-sans-serif, system-ui"
-        letterSpacing="0.08em"
+        fontSize={10}
+        fontFamily={arabicUi}
       >
-        DIGITAL MENU
+        قائمة رقمية
       </text>
 
-      {/* Plate + steak abstraction */}
       <ellipse cx="120" cy="196" rx="74" ry="54" stroke={goldStroke} strokeWidth={1} />
       <ellipse cx="120" cy="208" rx="56" ry="22" stroke={line} strokeWidth={0.9} />
       <path
@@ -56,11 +70,9 @@ export function DevicePhoneMenu(props: SVGProps<SVGSVGElement>) {
         strokeLinecap="round"
       />
 
-      {/* Line items */}
       <rect x="40" y="292" width="160" height="12" rx="3" stroke={line} opacity={0.45} />
       <rect x="40" y="314" width="120" height="12" rx="3" stroke={line} opacity={0.3} />
 
-      {/* Add to Cart */}
       <rect
         x="44"
         y="376"
@@ -72,14 +84,13 @@ export function DevicePhoneMenu(props: SVGProps<SVGSVGElement>) {
       />
       <text
         x="120"
-        y="399"
+        y="398"
         textAnchor="middle"
         fill={line}
-        fontSize={10}
-        fontFamily="ui-sans-serif, system-ui"
-        letterSpacing="0.26em"
+        fontSize={9}
+        fontFamily={arabicUi}
       >
-        ADD TO CART
+        أضف إلى العربة
       </text>
     </svg>
   );
@@ -88,12 +99,27 @@ export function DevicePhoneMenu(props: SVGProps<SVGSVGElement>) {
 export function DevicePhoneTracking(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 240 460" fill="none" aria-hidden {...props}>
-      <rect x="18" y="16" width="204" height="428" rx="32" stroke={goldStroke} strokeWidth={1.2} />
+      <rect
+        x="18"
+        y="16"
+        width="204"
+        height="428"
+        rx="32"
+        stroke={goldStroke}
+        strokeWidth={1.2}
+      />
       <rect x="88" y="28" width="64" height="6" rx="3" fill={line} opacity={0.45} />
 
-      <rect x="32" y="58" width="176" height="240" rx="18" stroke={goldSoft} opacity={0.45} />
+      <rect
+        x="32"
+        y="58"
+        width="176"
+        height="240"
+        rx="18"
+        stroke={goldSoft}
+        opacity={0.45}
+      />
 
-      {/* Map grid */}
       <path
         d="M54 148h134M54 216h134M116 108v216"
         stroke={line}
@@ -106,7 +132,6 @@ export function DevicePhoneTracking(props: SVGProps<SVGSVGElement>) {
         stroke={goldStroke}
         strokeDasharray="4 9"
       />
-      {/* Car */}
       <path
         d="M154 296h36l14 18 18 6"
         stroke={goldStroke}
@@ -115,36 +140,41 @@ export function DevicePhoneTracking(props: SVGProps<SVGSVGElement>) {
       />
       <circle cx="170" cy="322" r="11" stroke={line} />
 
-      {/* Live chip */}
-      <rect x="40" y="318" width="160" height="34" rx="10" stroke={goldStroke} />
+      <rect x="28" y="318" width="184" height="34" rx="10" stroke={goldStroke} />
       <text
         x="120"
         y="337"
         textAnchor="middle"
         fill={line}
         fontSize={9}
-        fontFamily="ui-sans-serif, system-ui"
-        letterSpacing="0.18em"
+        fontFamily={arabicUi}
       >
-        LIVE · EN ROUTE
+        مباشر · في الطريق
       </text>
     </svg>
   );
 }
 
 export function DeviceLaptopDashboard(props: SVGProps<SVGSVGElement>) {
+  const lidId = "lid-gradient-nexora";
   return (
     <svg viewBox="0 0 360 246" fill="none" aria-hidden {...props}>
-      {/* Lid */}
       <path
         d="M42 204h278l26 18h-332l26-18Z"
         stroke={goldStroke}
         strokeWidth={1}
       />
-      <rect x="32" y="22" width="296" height="182" rx="12" stroke={goldStroke} strokeWidth={1.1} />
+      <rect
+        x="32"
+        y="22"
+        width="296"
+        height="182"
+        rx="12"
+        stroke={goldStroke}
+        strokeWidth={1.1}
+      />
       <rect x="44" y="42" width="72" height="10" rx="3" stroke={line} opacity={0.55} />
 
-      {/* Mini charts */}
       <path
         d="M76 154l36-30 42 14 54-74 74 48"
         stroke={goldStroke}
@@ -152,23 +182,20 @@ export function DeviceLaptopDashboard(props: SVGProps<SVGSVGElement>) {
       />
       <rect x="64" y="154" width="220" height="28" rx="6" stroke={line} opacity={0.45} />
 
-      {/* Bar columns */}
       <rect x="70" y="116" width="18" height="38" rx="4" stroke={goldSoft} opacity={0.75} />
       <rect x="96" y="96" width="18" height="58" rx="4" stroke={goldStroke} />
       <rect x="126" y="108" width="18" height="46" rx="4" stroke={line} opacity={0.55} />
 
-      {/* Content blocks */}
       <rect x="198" y="68" width="112" height="46" rx="8" stroke={line} opacity={0.42} />
 
-      {/* Base glow */}
       <path
         d="M10 226h344"
-        stroke="url(#lid-g)"
+        stroke={`url(#${lidId})`}
         strokeWidth={8}
         strokeLinecap="round"
       />
       <defs>
-        <linearGradient id="lid-g" x1="0" y1="0" x2="1" y2="0">
+        <linearGradient id={lidId} x1="0" y1="0" x2="1" y2="0">
           <stop stopColor="#111" />
           <stop offset="0.5" stopColor="#d4af37" stopOpacity="0.65" />
           <stop offset="1" stopColor="#111" />
@@ -210,9 +237,16 @@ function MiniPhoneSteak(props: SVGProps<SVGSVGElement>) {
 function MiniCartMap(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 220 340" aria-hidden {...props}>
-      <rect width="204" height="318" x="8" y="10" rx="34" stroke={goldStroke} opacity={0.85} />
+      <rect
+        width="204"
+        height="318"
+        x="8"
+        y="10"
+        rx="34"
+        stroke={goldStroke}
+        opacity={0.85}
+      />
 
-      {/* List */}
       {[0, 1, 2].map((i) => (
         <rect
           key={`row-${String(i)}`}
@@ -226,9 +260,22 @@ function MiniCartMap(props: SVGProps<SVGSVGElement>) {
         />
       ))}
 
-      {/* Map */}
-      <rect x="42" y="210" width="136" height="98" rx="16" stroke={goldSoft} opacity={0.55} />
-      <path d="M64 274h126" stroke={line} strokeWidth={0.7} opacity={0.35} strokeDasharray="4 10" />
+      <rect
+        x="42"
+        y="210"
+        width="136"
+        height="98"
+        rx="16"
+        stroke={goldSoft}
+        opacity={0.55}
+      />
+      <path
+        d="M64 274h126"
+        stroke={line}
+        strokeWidth={0.7}
+        opacity={0.35}
+        strokeDasharray="4 10"
+      />
       <circle cx="98" cy="252" r="6" stroke={goldStroke} />
       <path
         d="M154 294h22l14 16 16 6"
@@ -261,7 +308,6 @@ function MiniLaptopWeb(props: SVGProps<SVGSVGElement>) {
 
       <path d="M0 214h344" stroke="#b8952f" opacity={0.4} />
 
-      {/* Base */}
       <path d="M34 218h274l34 26h-334l34-26Z" stroke={goldStroke} />
     </svg>
   );
@@ -287,10 +333,7 @@ function MiniRocketBurst(props: SVGProps<SVGSVGElement>) {
         stroke={goldStroke}
         strokeWidth={1.55}
       />
-      <path
-        d="M234 174h40l26 26h-116l52-34z"
-        stroke={goldSoft}
-      />
+      <path d="M234 174h40l26 26h-116l52-34z" stroke={goldSoft} />
       {[0, 1].map((i) => (
         <path
           key={`spark-${String(i)}`}
@@ -307,27 +350,27 @@ function MiniRocketBurst(props: SVGProps<SVGSVGElement>) {
 
 export const featureMocks = [
   {
-    title: "Digital Menu",
+    title: "القائمة الرقمية",
     description:
-      "Elegant menus on mobile with plated photography pacing and deliberate discovery.",
+      "قوائم تعرض أطباقَها بجدّية التقديم أمام الزائر؛ صور وفّرتها، وبنية تنقّل هادئة وخيارات واضحة لا تغرّ بالزخرف.",
     node: MiniPhoneSteak,
   },
   {
-    title: "Smart Cart & Tracking",
+    title: "العربة الذكية والتتبع",
     description:
-      "Structured cart timelines paired with a live courier map for confidence at every mile.",
+      "خيطًا زمنيًا لمحتويات العربة يصاحبُه مسار مرئي مرسوم على شبكة حضرية لمتابعة الموصل وقتًا بعد الآخر.",
     node: MiniCartMap,
   },
   {
-    title: "Seamless Web App",
+    title: "تجربة ويب لمشغلي المطاعم",
     description:
-      "A restrained operator surface for inventory, ticketing, and table orchestration.",
+      "مساحة قيادة تربط مخزون الحجوزات وخدمات الصالة وحجوزات الطاولات بإيقاع موحّد ومنضبِط أمامكم.",
     node: MiniLaptopWeb,
   },
   {
-    title: "Fast & Reliable",
+    title: "سرعة وثبات",
     description:
-      "Predictable throughput with streaming updates and deterministic checkout paths.",
+      "تشغيل موثوق، تحديثات لحظية، ومسارات إنجاز واضحة دون تأخّر حسًّي يضايِق الضيف أو الطاقم أمامكم.",
     node: MiniRocketBurst,
   },
 ] as const;

@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { Cairo, El_Messiri } from "next/font/google";
 
 import "./globals.css";
 
-const display = Playfair_Display({
+const display = El_Messiri({
   variable: "--font-display",
-  subsets: ["latin"],
+  subsets: ["arabic", "latin"],
   weight: ["500", "600", "700"],
 });
 
-const sans = DM_Sans({
+const ui = Cairo({
   variable: "--font-ui",
-  subsets: ["latin"],
+  subsets: ["arabic", "latin"],
   weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "NEXORA RESTAURANT | Digital Dining Platform",
+  title: "نيكسورا | منصة مطاعم رقمية",
   description:
-    "A premium omni-channel ordering platform merging digital menus, live tracking, and operator tooling.",
+    "منصة طلبات فاخرة تجمع القائمة الرقمية، التتبع المباشر، ولوحة التحكم في تجربة واحدة.",
 };
 
 export default function RootLayout({
@@ -27,13 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${display.variable} ${sans.variable} h-full`}
-    >
-      <body className="min-h-full bg-black text-neutral-50 antialiased">
-        {children}
-      </body>
+    <html lang="ar" dir="rtl" className={`${display.variable} ${ui.variable} h-full`}>
+      <body className="min-h-full bg-black text-neutral-50 antialiased">{children}</body>
     </html>
   );
 }

@@ -3,7 +3,9 @@
 :root {
   color-scheme: dark;
   --background: #000000;
-  --foreground: #f5f5f5;
+  --foreground: #f8f8f8;
+  --gold: #d4af37;
+  --gold-soft: #c9a22a66;
 }
 
 @theme inline {
@@ -12,6 +14,10 @@
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-gold: var(--gold);
+  --shadow-gold-lg: 0 48px 120px -48px rgb(212 175 55 / 0.38);
+  --shadow-gold-soft: 0 0 80px -20px rgb(212 175 55 / 0.22);
 }
 
 body {
@@ -19,19 +25,32 @@ body {
   background-color: #000000;
   color: var(--foreground);
   background-image:
-    radial-gradient(circle at 18% -8%, rgba(212, 175, 55, 0.12), transparent 46%),
-    radial-gradient(circle at 105% -2%, rgba(212, 175, 55, 0.08), transparent 38%),
-    radial-gradient(circle at 50% 120%, rgba(212, 175, 55, 0.04), transparent 46%),
-    linear-gradient(to bottom, #070707 0%, #020202 62%, #000000 100%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.75' stitchTiles='stitch' type='fractalNoise' numOctaves='3'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    radial-gradient(circle at 82% -6%, rgba(212, 175, 55, 0.11), transparent 44%),
+    radial-gradient(circle at -4% 18%, rgba(212, 175, 55, 0.07), transparent 38%),
+    radial-gradient(ellipse 90% 70% at 50% 108%, rgba(212, 175, 55, 0.05), transparent 52%),
+    linear-gradient(180deg, #080808 0%, #020202 55%, #000000 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.75' stitchTiles='stitch' type='fractalNoise' numOctaves='3'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='0.032'/%3E%3C/svg%3E");
   font-family:
     var(--font-ui),
-    ui-sans-serif,
-    system-ui,
+    "Segoe UI",
+    Tahoma,
     sans-serif;
   letter-spacing: 0.01em;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
   background: rgba(212, 175, 55, 0.32);
+}
+
+/* Decorative gold hairline for section labels */
+.nexora-label-line {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.35) 15%,
+    rgba(212, 175, 55, 0.75) 50%,
+    rgba(212, 175, 55, 0.35) 85%,
+    transparent
+  );
 }
