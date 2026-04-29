@@ -16,9 +16,9 @@ const ui = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "نيكسورا | منصة مطاعم رقمية",
+  title: "نيكسورا | منيو وطلب وتتبّع — منصّة مطاعم",
   description:
-    "منصة طلبات فاخرة تجمع القائمة الرقمية، التتبع المباشر، ولوحة التحكم في تجربة واحدة.",
+    "نموذج لمسار الطلب بالكامل: منيو ذكية على الموبايل، تتبّع لايف للتوصيل، ولوحة تحكم للصالة… الكلام مصري ومشروح بالتفاصيل.",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={`${display.variable} ${ui.variable} h-full`}>
+    <html lang="ar-EG" dir="rtl" className={`${display.variable} ${ui.variable} h-full`}>
       <body className="min-h-full bg-black text-neutral-50 antialiased">{children}</body>
     </html>
   );
